@@ -6,14 +6,15 @@ import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { MapPin, Mail } from 'lucide-react';
 import BackToTop from "../components/BackToTop";
+import HeroProduct from "../components/product/HeroProduct";
 
 function Product() {
   return (
     <div className="overflow-hidden">
       <Navbar />
-
+      <HeroProduct />
       <BackToTop />
-      <Footer />
+      <Footer bgColor="bg-[#F4B54D]" />
     </div>
   );
 }

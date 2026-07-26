@@ -23,7 +23,7 @@ function Home() {
             delay: 0.3,
           }} 
           className="flex justify-center">
-          <img src="/icons/decoration.svg" alt="decoration" className="w-30 md:w-40 2xl:w-50 max-w-md" />
+          <img src="/icons/decoration.svg" alt="decoration" className="w-25 md:w-35 2xl:w-45 max-w-md" />
         </motion.div>
       </section>
       <BackToTop />

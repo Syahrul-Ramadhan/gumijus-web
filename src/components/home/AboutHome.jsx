@@ -9,7 +9,7 @@ function AboutHome() {
         {/* TOP */}
         {/* ========================= */}
 
-        <div className="grid gap-10 grid-cols-1 lg:grid-cols-[0.9fr_1fr_1fr] 2xl:grid-cols-[1fr_1.1fr_1.1fr] lg:gap-12 2xl:gap-16 lg:items-start">
+        <div className="grid gap-6 md:gap-10 grid-cols-1 lg:grid-cols-[0.9fr_1fr_1fr] 2xl:grid-cols-[1fr_1.1fr_1.1fr] lg:gap-12 2xl:gap-16 lg:items-start">
 
           {/* Logo */}
           <motion.div
@@ -36,12 +36,12 @@ function AboutHome() {
             <h2
               className="
                 mt-4
-                text-2xl
+                text-xl
                 font-medium
                 text-orange-500
 
-                md:text-3xl
-                lg:text-4xl
+                md:text-2xl
+                lg:text-3xl
               "
             >
               Gimmie JUS-Sseyeo!

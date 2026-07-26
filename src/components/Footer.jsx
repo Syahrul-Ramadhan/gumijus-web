@@ -6,7 +6,7 @@ function Footer({ bgColor }) {
   return (
     <footer className={`mt-6 md:mt-10 ${bgColor} text-white`}>
 
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-8 py-12 md:grid-cols-4">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-8 py-12 md:grid-cols-4 ">
 
         {/* Left */}
         <div>
