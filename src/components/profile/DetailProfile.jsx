@@ -76,7 +76,7 @@ function ProfileDetail() {
                 space-y-5
                 text-sm
                 leading-relaxed
-                text-[#7B2C6F]
+                text-neutral-600
 
                 md:text-base
               "
@@ -104,7 +104,7 @@ function ProfileDetail() {
                 space-y-5
                 text-sm
                 leading-relaxed
-                text-[#7B2C6F]
+                text-neutral-600
 
                 md:text-base
               "
@@ -224,7 +224,7 @@ function ProfileDetail() {
                   mt-5
                   text-sm
                   leading-relaxed
-                  text-[#7B2C6F]
+                  text-neutral-600
 
                   md:text-base
                 "
@@ -262,7 +262,7 @@ function ProfileDetail() {
                   space-y-3
                   text-sm
                   leading-relaxed
-                  text-[#7B2C6F]
+                  text-neutral-600
 
                   md:text-base
                 "

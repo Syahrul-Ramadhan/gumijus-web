@@ -82,24 +82,6 @@ function OutletCard({ store }) {
           {store.desc}
         </p>
 
-        <button
-          className="
-            mt-2
-            w-fit
-            rounded-xl
-            bg-[#871D59]
-            px-5
-            py-3
-            text-sm
-            font-semibold
-            text-white
-            transition
-            hover:bg-[#871D59]/90
-          "
-        >
-          Pesan Sekarang
-        </button>
-
       </div>
 
     </motion.a>

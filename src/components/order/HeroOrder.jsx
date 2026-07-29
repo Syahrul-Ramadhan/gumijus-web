@@ -197,6 +197,7 @@ function HeroOrder() {
                 text-white
                 transition-colors
                 hover:bg-[#871D59]/90
+                hover:cursor-pointer
               "
             >
               Pesan Sekarang

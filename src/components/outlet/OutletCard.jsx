@@ -154,7 +154,7 @@ function OutletCard({
           className="
             mt-5
             max-w-sm
-            text-[#7B2C6F]
+            text-neutral-600
             leading-relaxed
             text-sm
 

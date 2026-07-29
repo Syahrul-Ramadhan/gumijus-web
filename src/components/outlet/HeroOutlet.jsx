@@ -194,6 +194,7 @@ function HeroOutlet() {
                 text-white
                 transition-colors
                 hover:bg-[#D73A35]
+                hover:cursor-pointer
                 text-sm
               "
             >

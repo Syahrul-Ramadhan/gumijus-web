@@ -60,7 +60,7 @@ function AboutHome() {
                 gap-5
                 text-sm
                 leading-relaxed
-                text-[#7B2C6F]
+                text-neutral-600
                 md:text-base
                 "
             >
@@ -90,7 +90,7 @@ function AboutHome() {
                 gap-5
                 text-sm
                 leading-relaxed
-                text-[#7B2C6F]
+                text-neutral-600
                 md:text-base
                 "
             >
@@ -111,6 +111,7 @@ function AboutHome() {
                     font-semibold
                     text-white
                     "
+                    href="/products"
                 >
                     Lihat Produk
                 </a>
@@ -193,7 +194,7 @@ function AboutHome() {
                 mt-5
                 text-sm
                 leading-relaxed
-                text-[#7B2C6F]
+                text-neutral-600
 
                 md:text-base
               "
@@ -212,7 +213,7 @@ function AboutHome() {
                 mt-5
                 text-sm
                 leading-relaxed
-                text-[#7B2C6F]
+                text-neutral-600
 
                 md:text-base
               "

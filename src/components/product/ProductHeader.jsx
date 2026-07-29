@@ -4,15 +4,15 @@ const tabs = [
   "Produk Terlaris",
   "Gumijus Blend",
   "Milk-Based Blend",
+  "Yogurt Blend",
   "Yakult Blend",
   "Simple Juice",
-  "Yogurt Blend",
 ];
 
 function ProductHeader({ activeTab, setActiveTab }) {
   return (
-    <section className="bg-white pt-16 lg:pt-24">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+    <section className="bg-white pt-0 lg:pt-24">
+      <div className="mx-auto max-w-8xl px-6 lg:px-20">
 
         {/* Heading */}
 
@@ -28,7 +28,7 @@ function ProductHeader({ activeTab, setActiveTab }) {
               font-medium
               uppercase
               tracking-[0.2em]
-              text-orange-500
+              text-neutral-700
             "
           >
             Produk
@@ -39,7 +39,7 @@ function ProductHeader({ activeTab, setActiveTab }) {
               mt-3
               text-4xl
               font-bold
-              text-[#7B2C6F]
+              text-[#F4B54D]
 
               md:text-5xl
               lg:text-6xl
@@ -54,7 +54,7 @@ function ProductHeader({ activeTab, setActiveTab }) {
               max-w-4xl
               text-sm
               leading-7
-              text-[#7B2C6F]
+              text-neutral-600
 
               md:text-base
             "
@@ -89,7 +89,7 @@ function ProductHeader({ activeTab, setActiveTab }) {
               onClick={() => setActiveTab(tab)}
               className={`
                 shrink-0
-                rounded-full
+                rounded-2xl
                 border
                 px-6
                 py-3
@@ -100,8 +100,8 @@ function ProductHeader({ activeTab, setActiveTab }) {
 
                 ${
                   activeTab === tab
-                    ? "border-[#EC7825] bg-[#EC7825] text-white shadow-lg"
-                    : "border-gray-200 bg-white text-[#7B2C6F] hover:border-[#EC7825] hover:text-[#EC7825]"
+                    ? "border-[#F4B54D] bg-[#F4B54D] text-white shadow-lg"
+                    : "border-gray-200 bg-white text-neutral-700 hover:border-[#F4B54D] hover:text-[#F4B54D] hover:cursor-pointer"
                 }
               `}
             >
