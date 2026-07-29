@@ -9,7 +9,7 @@ import DetailProfile from "../components/profile/DetailProfile";
 function Profile() {
   return (
     <div className="overflow-hidden">
-      <Navbar />
+      <Navbar bgColor="bg-[#336940]"/>
       <HeroProfile />
       <DetailProfile />
       {/* Decoration */}
@@ -24,7 +24,7 @@ function Profile() {
           className="flex justify-center">
           <img src="/icons/decoration.svg" alt="decoration" className="w-25 md:w-35 2xl:w-45 max-w-md" />
         </motion.div>
-      <BackToTop />
+      <BackToTop bgColor="bg-[#336940]" bgColorHover="bg-[#295232]" />
       <Footer bgColor="bg-[#336940]" />
     </div>
   );

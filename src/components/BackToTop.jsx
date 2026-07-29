@@ -6,7 +6,7 @@ import {
 import { ChevronUp } from "lucide-react";
 import { useEffect, useState } from "react";
 
-function BackToTop() {
+function BackToTop({bgColor, bgColorHover}) {
   const [show, setShow] = useState(false);
   const [nearFooter, setNearFooter] = useState(false);
 
@@ -77,7 +77,7 @@ function BackToTop() {
             ${
               nearFooter
                 ? "bg-white text-slate-700 hover:bg-slate-100"
-                : "bg-[#EC7825] text-white hover:bg-[#d46b20]"
+                : `${bgColor} text-white hover:${bgColorHover}`
             }
           `}
         >

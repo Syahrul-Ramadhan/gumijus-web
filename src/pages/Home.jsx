@@ -7,7 +7,7 @@ import AboutSection from "../components/home/AboutHome";
 function Home() {
   return (
     <div className="overflow-hidden ">
-      <Navbar />
+      <Navbar bgColor="bg-[#EC7825]" />
       <section className="relative w-full overflow-hidden">
         {/* Hero Section Content */}
         <HeroSection />
@@ -26,7 +26,7 @@ function Home() {
           <img src="/icons/decoration.svg" alt="decoration" className="w-25 md:w-35 2xl:w-45 max-w-md" />
         </motion.div>
       </section>
-      <BackToTop />
+      <BackToTop bgColor="bg-[#EC7825]" bgColorHover="bg-[#d46b20]" />
       <Footer bgColor="bg-[#EC7825]" />
     </div>
   );

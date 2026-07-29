@@ -4,7 +4,7 @@ import { X, Menu } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 
-function Navbar() {
+function Navbar({bgColor}) {
   const [showMenu, setShowMenu] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -39,7 +39,7 @@ function Navbar() {
 
           ${
             scrolled
-              ? "bg-[#EC7825]/90 backdrop-blur-xl shadow-xl"
+              ? `${bgColor} backdrop-blur-xl shadow-xl`
               : "bg-white"
           }
         `}
@@ -77,8 +77,8 @@ function Navbar() {
             Outlet
           </a>
 
-          <a href="/contact" className={navClass}>
-            Kontak
+          <a href="/order" className={navClass}>
+            Pesan
           </a>
         </div>
         {/* Hamburger */}
@@ -140,7 +140,7 @@ function Navbar() {
                 ${
                   scrolled
                     ? "bg-white"
-                    : "bg-[#EC7825] "
+                    : `${bgColor} `
                 }
               `}
             >
@@ -178,8 +178,8 @@ function Navbar() {
                   Outlet
                 </a>
 
-                <a href="/contact" onClick={() => setShowMenu(false)} className={ scrolled ? "text-slate-700 hover:opacity-80" : "text-white hover:opacity-80"}>
-                  Kontak
+                <a href="/order" onClick={() => setShowMenu(false)} className={ scrolled ? "text-slate-700 hover:opacity-80" : "text-white hover:opacity-80"}>
+                  Pesan
                 </a>
 
               </div>

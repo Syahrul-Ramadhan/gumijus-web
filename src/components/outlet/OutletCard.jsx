@@ -4,6 +4,7 @@ function OutletCard({
   image,
   title,
   address,
+  link,
   reverse = false,
 }) {
   return (
@@ -28,10 +29,10 @@ function OutletCard({
         gap-8
         items-center
 
-        lg:grid-cols-2
-        lg:gap-20
+        md:grid-cols-2
+        md:gap-20
 
-        ${reverse ? "lg:[&>*:first-child]:order-2" : ""}
+        ${reverse ? "md:[&>*:first-child]:order-2" : ""}
       `}
     >
       {/* ====================== */}
@@ -113,8 +114,8 @@ function OutletCard({
           items-center
           text-center
 
-          lg:items-start
-          lg:text-left
+          md:items-start
+          md:text-left
         "
       >
         {/* Decorative */}
@@ -170,11 +171,13 @@ function OutletCard({
           whileTap={{
             scale: .95,
           }}
-          href="#"
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
           className="
             mt-8
 
-            rounded-full
+            rounded-lg
             bg-[#B72E2C]
 
             px-8

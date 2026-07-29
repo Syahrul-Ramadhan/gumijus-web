@@ -1,82 +1,78 @@
 import { motion } from "motion/react";
 
-function HeroOutlet() {
-  const scrollToOutlet = () => {
+function HeroOrder() {
+  const scrollToOrder = () => {
     document
-      .getElementById("outlet-list")
+      .getElementById("online-order")
       ?.scrollIntoView({
         behavior: "smooth",
       });
   };
 
   return (
-    <section className="relative mt-14 md:mt-18 overflow-hidden">
+    <section className="relative mt-14 overflow-hidden md:mt-18">
       <div
         className="
           relative
-          h-[45vh]
-          md:h-[60vh]
-          lg:h-[105vh]
+          h-[50vh]
+          md:h-[70vh]
+          lg:h-[110vh]
           2xl:h-screen
         "
       >
-
         {/* ===================== */}
         {/* Background */}
         {/* ===================== */}
 
         <motion.div
-        initial={{
+          initial={{
             scale: 1.08,
             opacity: 0,
             filter: "blur(8px)",
-        }}
-        animate={{
+          }}
+          animate={{
             scale: 1,
             opacity: 1,
             filter: "blur(0px)",
-        }}
-        transition={{
+          }}
+          transition={{
             duration: 1.4,
             ease: "easeOut",
-        }}
-        className="
-            absolute
-            inset-0
-        "
+          }}
+          className="absolute inset-0"
         >
-        <picture className="block h-full w-full">
+          <picture className="block h-full w-full">
             {/* 2XL */}
             <source
-            media="(min-width:1536px)"
-            srcSet="/photos/hero/outlet-full-2xl.jpeg"
+              media="(min-width:1536px)"
+              srcSet="/photos/hero/order-full.jpeg"
             />
 
             {/* LG */}
             <source
-            media="(min-width:1024px)"
-            srcSet="/photos/hero/outlet-full-lg.jpeg"
+              media="(min-width:1024px)"
+              srcSet="/photos/hero/order-full.jpeg"
             />
 
             {/* MD */}
             <source
-            media="(min-width:768px)"
-            srcSet="/photos/hero/outlet-full-md.jpeg"
+              media="(min-width:768px)"
+              srcSet="/photos/hero/order-full.jpeg"
             />
 
             {/* Mobile */}
             <img
-            src="/photos/hero/outlet-full-sm.jpeg"
-            alt="Outlet Gumijus"
-            className="
+              src="/photos/hero/order-full-sm.jpeg"
+              alt="Pesan Online Gumijus"
+              className="
                 h-full
                 w-full
                 object-cover
                 pointer-events-none
                 select-none
-            "
+              "
             />
-        </picture>
+          </picture>
         </motion.div>
 
         {/* Overlay */}
@@ -122,83 +118,88 @@ function HeroOutlet() {
               x: 0,
             }}
             transition={{
-              duration: .8,
-              delay: .3,
+              duration: 0.8,
+              delay: 0.3,
             }}
-            className="max-w-3xl"
+            className="max-w-xl"
           >
+            {/* Label */}
+
             <p
-            className="
+              className="
                 text-xs
-                lg:text-sm
-                2xl:text-base
                 font-semibold
                 uppercase
                 tracking-[0.25em]
                 text-white
-            "
+
+                lg:text-sm
+              "
             >
-            Outlet
+              Pesan Online
             </p>
 
+            {/* Headline */}
+
             <h1
-            className="
+              className="
                 mt-4
-                text-3xl
                 font-bold
                 leading-tight
                 text-white
 
+                text-4xl
                 md:text-6xl
                 lg:text-7xl
                 2xl:text-8xl
-            "
+              "
             >
-            Find Nearby.
-            <br />
-            Visit Happily.
+              Order Now.
+              <br />
+              Enjoy Wow.
             </h1>
 
+            {/* Description */}
+
             <p
-            className="
-                mt-4
-                max-w-xm
+              className="
+                mt-5
+                max-w-sm
                 text-sm
-                md:text-base
-                lg:text-lg
-                2xl:text-xl
-
                 leading-6
-                text-white
+                text-white/90
 
-            "
+                md:text-base
+                2xl:text-lg
+              "
             >
-            Temukan outlet Gumijus terdekat.
+              Pesan Gumijus favoritmu kapan saja.
             </p>
+
+            {/* Button */}
 
             <motion.button
               whileHover={{
                 scale: 1.05,
               }}
               whileTap={{
-                scale: .96,
+                scale: 0.96,
               }}
-              onClick={scrollToOutlet}
+              onClick={scrollToOrder}
               className="
                 mt-8
                 rounded-xl
-                bg-[#B72E2C]
+                bg-[#871D59]
                 px-7
                 py-3
+                text-sm
                 font-semibold
                 text-white
                 transition-colors
-                hover:bg-[#D73A35]
-                text-sm
+                hover:bg-[#871D59]/90
               "
             >
-              Lihat Outlet
-              
+              Pesan Sekarang
             </motion.button>
           </motion.div>
         </div>
@@ -211,10 +212,11 @@ function HeroOutlet() {
             inset-x-0
             bottom-0
             h-16
-            lg:h-24
             bg-gradient-to-t
             from-white
             to-transparent
+
+            lg:h-24
           "
         />
       </div>
@@ -222,4 +224,4 @@ function HeroOutlet() {
   );
 }
 
-export default HeroOutlet;
+export default HeroOrder;
