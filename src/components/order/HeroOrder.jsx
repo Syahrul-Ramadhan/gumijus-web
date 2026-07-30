@@ -95,9 +95,9 @@ function HeroOrder() {
             z-10
             mx-auto
             flex
-            pt-10
+            pt-15
             md:pt-40
-            lg:pt-15
+            lg:pt-24
             2xl:pt-45
             h-full
             md:w-190
@@ -154,27 +154,8 @@ function HeroOrder() {
                 2xl:text-8xl
               "
             >
-              Order Now.
-              <br />
-              Enjoy Wow.
+              Go Mix <br /> Your Juice.
             </h1>
-
-            {/* Description */}
-
-            <p
-              className="
-                mt-5
-                max-w-sm
-                text-sm
-                leading-6
-                text-white/90
-
-                md:text-base
-                2xl:text-lg
-              "
-            >
-              Pesan Gumijus favoritmu kapan saja.
-            </p>
 
             {/* Button */}
 

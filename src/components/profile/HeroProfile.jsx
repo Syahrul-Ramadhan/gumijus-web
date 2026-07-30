@@ -90,11 +90,11 @@ function HeroProfile() {
                   2xl:text-9xl
                 "
               >
+                Sehat.
+                <br />
                 Fresh.
                 <br />
-                Healthy.
-                <br />
-                Happy.
+                & Tetap Fun.
               </h1>
 
               <motion.div

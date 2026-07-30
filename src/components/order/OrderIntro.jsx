@@ -1,51 +1,100 @@
 import { motion } from "motion/react";
 import OutletCard from "./OutletCard";
+import useIsMobile from "../../hooks/useIsMobile";
 
-const outletData = [
-  {
-    outlet: "Outlet Tubagus",
-    stores: [
-      {
-        name: "Shopee",
-        desc: "Belanja Gumijus melalui Shopee.",
-        logo: "/logo/shopee-logo.svg",
-        url: "#",
-      },
-      {
-        name: "GoFood",
-        desc: "Pesan Gumijus lewat GoFood.",
-        logo: "/logo/gofood-logo.svg",
-        url: "https://gofood.link/a/DENx6Wu",
-      },
-      {
-        name: "GrabFood",
-        desc: "Pesan Gumijus lewat GrabFood.",
-        logo: "/logo/grab-logo.svg",
-        url: "https://r.grab.com/g/6-20260724_191010_61863FED70324468963CFA255C8D8A24_MEXMPS-6-C3DWGJVJCN4ZEJ",
-      },
-    ],
-  },
+// const outletData = [
+//   {
+//     outlet: "Outlet Tubagus",
+//     stores: [
+//       {
+//         name: "Shopee",
+//         desc: "Belanja Gumijus melalui Shopee.",
+//         logo: "/logo/shopee-logo.svg",
+//         url: "https://shopee.co.id/universal-link/now-food/shop/20373274?deep_and_deferred=1&shareChannel=copy_link",
+//       },
+//       {
+//         name: "GoFood",
+//         desc: "Pesan Gumijus lewat GoFood.",
+//         logo: "/logo/gofood-logo.svg",
+//         url: "https://gofood.link/a/DENx6Wu",
+//       },
+//       {
+//         name: "GrabFood",
+//         desc: "Pesan Gumijus lewat GrabFood.",
+//         logo: "/logo/grab-logo.svg",
+//         url: "https://r.grab.com/g/6-20260724_191010_61863FED70324468963CFA255C8D8A24_MEXMPS-6-C3DWGJVJCN4ZEJ",
+//       },
+//     ],
+//   },
 
-  {
-    outlet: "Outlet Gegerkalong",
-    stores: [
-      {
-        name: "Shopee",
-        desc: "Belanja Gumijus melalui Shopee.",
-        logo: "/logo/shopee-logo.svg",
-        url: "#",
-      },
-      {
-        name: "GoFood",
-        desc: "Pesan Gumijus lewat GoFood.",
-        logo: "/logo/gofood-logo.svg",
-        url: "https://gofood.link/a/Kt7F1qm",
-      },
-    ],
-  },
-];
+//   {
+//     outlet: "Outlet Gegerkalong",
+//     stores: [
+//       {
+//         name: "Shopee",
+//         desc: "Belanja Gumijus melalui Shopee.",
+//         logo: "/logo/shopee-logo.svg",
+//         url: "https://shopee.co.id/universal-link/now-food/shop/21512047?deep_and_deferred=1&shareChannel=copy_link",
+//       },
+//       {
+//         name: "GoFood",
+//         desc: "Pesan Gumijus lewat GoFood.",
+//         logo: "/logo/gofood-logo.svg",
+//         url: "https://gofood.link/a/Kt7F1qm",
+//       },
+//     ],
+//   },
+// ];
 
 function OrderIntro() {
+  const isMobile = useIsMobile();
+
+  const outletData = [
+    {
+      outlet: "Outlet Tubagus",
+      stores: [
+        {
+          name: "Shopee",
+          desc: "Belanja Gumijus melalui Shopee.",
+          logo: "/logo/shopee-logo.svg",
+          url: "https://shopee.co.id/universal-link/now-food/shop/20373274?deep_and_deferred=1&shareChannel=copy_link",
+          mobileOnly: true,
+        },
+        {
+          name: "GoFood",
+          desc: "Pesan Gumijus lewat GoFood.",
+          logo: "/logo/gofood-logo.svg",
+          url: "https://gofood.link/a/DENx6Wu",
+        },
+        {
+          name: "GrabFood",
+          desc: "Pesan Gumijus lewat GrabFood.",
+          logo: "/logo/grab-logo.svg",
+          url: "https://r.grab.com/g/6-20260724_191010_61863FED70324468963CFA255C8D8A24_MEXMPS-6-C3DWGJVJCN4ZEJ",
+        },
+      ],
+    },
+
+    {
+      outlet: "Outlet Gegerkalong",
+      stores: [
+        {
+          name: "Shopee",
+          desc: "Belanja Gumijus melalui Shopee.",
+          logo: "/logo/shopee-logo.svg",
+          url: "https://shopee.co.id/universal-link/now-food/shop/21512047?deep_and_deferred=1&shareChannel=copy_link",
+          mobileOnly: true,
+        },
+        {
+          name: "GoFood",
+          desc: "Pesan Gumijus lewat GoFood.",
+          logo: "/logo/gofood-logo.svg",
+          url: "https://gofood.link/a/Kt7F1qm",
+        },
+      ],
+    },
+  ];
+
   return (
     <section className="bg-white py-16 lg:py-24">
 
@@ -166,9 +215,20 @@ function OrderIntro() {
                   lg:grid-cols-3
                 "
               >
-                {outlet.stores.map((store, i) => (
-                  <OutletCard key={i} store={store} />
-                ))}
+                {outlet.stores
+                  .filter((store) => {
+                    if (store.mobileOnly && !isMobile) {
+                      return false;
+                    }
+
+                    return true;
+                  })
+                  .map((store, i) => (
+                    <OutletCard
+                      key={i}
+                      store={store}
+                    />
+                  ))}
               </div>
 
             </div>
